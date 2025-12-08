@@ -12,8 +12,8 @@
                 <tr>
                     <th>id</th>
                     <th>タスク</th>
-                    <th></th>
-                    <th></th>
+                    <th><!-- 編集ボタン列 --></th>
+                    <th><!-- 削除ボタン列 --></th>
                 </tr>
             </thead>
             <tbody>
