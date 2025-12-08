@@ -33,8 +33,15 @@ class TasksController extends Controller
     //「新規登録処理」
     public function store(Request $request)
     {
+        // バリデーション
+        $request->validate([
+            'status' => 'required|max:10',
+            'content' => 'required|max:255',
+        ]);
+
         // メッセージを作成
         $task = new Task;
+        $task->status = $request->status;
         $task->content = $request->content;
         $task->save();
 
@@ -69,8 +76,15 @@ class TasksController extends Controller
     //「更新処理」
     public function update(Request $request, string $id)
     {
+        // バリデーション
+        $request->validate([
+            'status' => 'required|max:10',
+            'content' => 'required|max:255',
+        ]);
+
         // idの値でメッセージを検索して取得
         $task = Task::findOrFail($id);
+        $task->status = $request->status;
         // メッセージを更新
         $task->content = $request->content;
         $task->save();

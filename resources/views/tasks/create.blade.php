@@ -18,7 +18,14 @@
                     <input type="text" name="content" class="input input-bordered w-full">
                 </div>
 
-            <button type="submit" class="btn btn-primary btn-outline">投稿</button>
+                <div class="my-4 w-1/2">
+                    <label for="status" class="label">
+                        <span class="label-text">ステータス:</span>
+                    </label>
+                    <input type="text" name="status" class="input input-bordered w-full">
+                </div>
+
+            <button type="submit" class="btn btn-primary">投稿</button>
         </form>
     </div>
 

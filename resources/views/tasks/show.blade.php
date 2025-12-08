@@ -9,13 +9,18 @@
 
     <table class="table w-full my-4">
         <tr>
-            <th>id</th>
+            <th class="w-30">id</th>
             <td>{{ $task->id }}</td>
         </tr>
 
         <tr>
-            <th>タスク</th>
+            <th class="w-30">タスク</th>
             <td>{{ $task->content }}</td>
+        </tr>
+
+        <tr>
+            <th class="w-30">ステータス</th>
+            <td>{{ $task->status }}</td>
         </tr>
     </table>
 

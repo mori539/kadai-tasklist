@@ -12,6 +12,7 @@
                 <tr>
                     <th>id</th>
                     <th>タスク</th>
+                    <th>ステータス</th>
                     <th><!-- 編集ボタン列 --></th>
                     <th><!-- 削除ボタン列 --></th>
                 </tr>
@@ -21,6 +22,7 @@
             <tr>
                 <td class="w-20">{{$task->id}}</td>
                 <td><a class="link link-hover link-info" href="{{ route('tasks.show', $task->id) }}">{{ $task->content }}</a></td>
+                <td class="w-40">{{$task->status}}</td>
                 <td class="w-30"><a class="btn btn-primary btn-outline" href="{{ route('tasks.edit', $task->id) }}">編集</a></td>
                 <td class="w-30">
                     {{-- タスク削除フォーム --}}
