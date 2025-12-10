@@ -9,7 +9,8 @@
                 <div class="max-w-md mb-10">
                     <h2>Welcome to the taskBord</h2>
                     {{-- ユーザー登録ページへのリンク --}}
-                    <a class="btn btn-primary btn-lg" href="{{ route('register') }}">ユーザー登録</a>
+                    <div class="my-[10px]"><a class="btn btn-primary btn-outline btn-lg" href="{{ route('register') }}">ユーザー登録</a></div>
+                    <div class="my-[10px]"><a class="btn btn-primary btn-lg" href="{{ route('login') }}">ログイン</a></div>
                 </div>
             </div>
         </div>
