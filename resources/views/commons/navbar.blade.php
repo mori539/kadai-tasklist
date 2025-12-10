@@ -6,10 +6,28 @@
         </div>
 
         <div class="flex-none">
-            <ul tabindex="0" class="menu lg:block lg:menu-horizontal">
-                {{-- タスク作成ページへのリンク --}}
-                <li><a class="link link-hover" href="{{ route('tasks.create') }}">新規タスクの投稿</a></li>
-            </ul>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <ul class="menu hidden lg:menu-horizontal">
+                    @include('commons.link_items')
+                </ul>
+                <ul class="menu lg:hidden">
+                    <li>
+                        <details class="dropdown dropdown-end">
+                            <summary>
+                                @auth
+                                    {{ Auth::user()->name }}
+                                @else
+                                    Guest
+                                @endauth
+                            </summary>
+                            <ul class="menu dropdown-content shadow rounded-t-none bg-base-100 w-52 p-2 link-neutral">
+                                @include('commons.link_items')
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </form>
         </div>
     </nav>
 </header>
