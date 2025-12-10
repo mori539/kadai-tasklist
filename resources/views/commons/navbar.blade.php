@@ -8,10 +8,7 @@
         <div class="flex-none">
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <ul class="menu hidden lg:menu-horizontal">
-                    @include('commons.link_items')
-                </ul>
-                <ul class="menu lg:hidden">
+                <ul class="menu">
                     <li>
                         <details class="dropdown dropdown-end">
                             <summary>
